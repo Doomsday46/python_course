@@ -1,5 +1,7 @@
 import math as m
-
+from random import seed
+from random import randint
+from termcolor import colored
 def quest1(A):
     countElementForAQuest = len(list(filter(isEvenNumberDividers, A)))
     minNumber = min(filter(isValidElement, A))
@@ -20,9 +22,19 @@ def quest2(A):
     lastNegativeNumber =  (len(A) - 1) - lastIndexNegativeNumber(A)
     begin = firstPositiveNumber  if firstPositiveNumber < lastNegativeNumber else lastNegativeNumber
     end = firstPositiveNumber if  firstPositiveNumber > lastNegativeNumber else lastNegativeNumber
+    for index, number in enumerate(A):
+        if begin < index < end:
+            print(colored(number, 'red'), end=' ')
+        else: print(number, end=' ')
     subArray = A[begin + 1:end]
     subArray = sorted(subArray)
     A[begin + 1: end] = subArray
+    print()
+    for index, number in enumerate(A):
+        if begin < index < end:
+            print(colored(number, 'blue'), end=' ')
+        else: print(number, end=' ')
+    print()
     return A
 
 def sorted(array):
@@ -48,7 +60,8 @@ def performLaboratory():
     print("A: {}".format(a), "B: {}".format(b))
 
     print("Quest2")
-    array = [0, 9, -1, 2, 4, -4, -9, 2, 5, 9]
+    seed(1)
+    array = [randint(-100, 100) for i in range(10)]
     print(array)
-    print(quest2(array))
+    quest2(array)
 
