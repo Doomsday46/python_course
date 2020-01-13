@@ -1,6 +1,5 @@
 import math as m
 
-
 def firstExpression(x, b):
     return 5 * b * m.cos(x) ** 2
 

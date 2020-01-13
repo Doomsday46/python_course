@@ -4,7 +4,7 @@ import math as m
 def task1(N):
     result = 0
     for i in range(N):
-        result += 1.0 / (i + 1)
+        result += sum(1.0 / (j + 1) for j in range(0, i + 1, 1))
     return result
 
 
@@ -30,7 +30,7 @@ def task3(N):
 def performLaboratory():
     print("Laboratory 4")
     print("task 1")
-    print(task1(4))
+    print(task1(2))
 
     print("task 2")
     print(task2(10, 2, 1))

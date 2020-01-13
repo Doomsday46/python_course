@@ -1,12 +1,16 @@
 import math as m
 
-
 def task1():
     print("task 1")
-    print(firstExpression(1, 1))
-    print(secondExpression(1, 0))
-    print(thirdExpression(1, 1))
+    print("---- Float -----")
+    print(firstExpression(1.25, 1))
+    print(secondExpression(4, 1))
+    print(thirdExpression(5, 6))
 
+    print("---- Integer -----")
+    print(int(firstExpression(1.25, 1)))
+    print(int(secondExpression(4, 1)))
+    print(int(thirdExpression(5, 6)))
 
 def task2(x, y, z):
     print("task 2")
