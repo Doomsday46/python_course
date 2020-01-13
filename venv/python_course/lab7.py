@@ -1,6 +1,6 @@
 import collections
 
-def quest1(text):
+def task1(text):
     countLetters = collections.Counter(text.split())
     result = countLetters.most_common(1)
     for letter, count in countLetters.items():
@@ -9,7 +9,7 @@ def quest1(text):
             result = [(letter, count)]
     return result[0]
 
-def quest2(text, symbol):
+def task2(text, symbol):
     count = 0
     wordResult = ""
     textSplitted = text.split(" ")
@@ -21,10 +21,10 @@ def quest2(text, symbol):
 
 def performLaboratory():
     print("Laboratory 7")
-    print("Quest1")
-    letter, count = quest1("aaa bb xxxxx")
+    print("task1")
+    letter, count = task1("aaa bb xxxxx")
     print('Letter: {}'.format(letter), 'Counter: {}'.format(count))
 
-    print("Quest2")
-    count, text = quest2("arb ccc vvv bbb","a")
+    print("task2")
+    count, text = task2("arb ccc vvv bbb","a")
     print(count, text)
