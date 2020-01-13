@@ -24,11 +24,10 @@ def quest4(M, S, P):
     return maxElement
 
 def quest5(M, N):
-    matrix = rotation(M, N)
-    return rotation(matrix, N)
+    return rotation(M, N)
 
 def rotation(M, N):
-    return [[row[j] for row in M] for j in range(N - 1, -1, -1)]
+    return [[M[N - 1 - row][N - 1 - column] for column in range(N)] for row in range(N)]
 
 def performLaboratory():
     print("Laboratory 9")
