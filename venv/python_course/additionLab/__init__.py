@@ -16,8 +16,7 @@ if __name__ == '__main__':
     t.insert(8)
     t.insert(-79)
     t.insert(2)
-    t.print_tree()
-
+    t.root.display()
     t.levelorder()
     print(t.countP)
 
